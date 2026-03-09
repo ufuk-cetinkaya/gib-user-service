@@ -1,0 +1,41 @@
+name: Build and Push Docker Images
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Login to GitHub Container Registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Build API image
+        run: |
+          docker build -f Api/Dockerfile -t ghcr.io/${{ github.repository_owner }}/gib-user-api:latest .
+
+      - name: Push API image
+        run: |
+          docker push ghcr.io/${{ github.repository_owner }}/gib-user-api:latest
+
+      - name: Build Worker image
+        run: |
+          docker build -f Worker/Dockerfile -t ghcr.io/${{ github.repository_owner }}/gib-user-worker:latest .
+
+      - name: Push Worker image
+        run: |
+          docker push ghcr.io/${{ github.repository_owner }}/gib-user-worker:latest
+
+      - name: Push Worker image
+        run: |
+          docker push ghcr.io/${{ github.repository_owner }}/gib-user-worker:latest
