@@ -1,0 +1,188 @@
+{
+  "info": {
+    "_postman_id": "26b947e4-56cb-46a1-b6f5-2e64dad8fc1b",
+    "name": "gib-user-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21079427"
+  },
+  "item": [
+    {
+      "name": "gib-users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/gib-users?identifier=4840847211&documentType=INVOICE&unit=PK",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "gib-users"
+          ],
+          "query": [
+            {
+              "key": "identifier",
+              "value": "4840847211"
+            },
+            {
+              "key": "documentType",
+              "value": "INVOICE"
+            },
+            {
+              "key": "unit",
+              "value": "PK"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "invoice-pk",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/gib-users?identifier=4840847211&documentType=INVOICE&unit=PK",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "gib-users"
+              ],
+              "query": [
+                {
+                  "key": "identifier",
+                  "value": "4840847211"
+                },
+                {
+                  "key": "documentType",
+                  "value": "INVOICE"
+                },
+                {
+                  "key": "unit",
+                  "value": "PK"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": null
+        },
+        {
+          "name": "invoice-gb",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/gib-users?identifier=4840847211&documentType=INVOICE&unit=GB",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "gib-users"
+              ],
+              "query": [
+                {
+                  "key": "identifier",
+                  "value": "4840847211"
+                },
+                {
+                  "key": "documentType",
+                  "value": "INVOICE"
+                },
+                {
+                  "key": "unit",
+                  "value": "GB"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": null
+        },
+        {
+          "name": "despatch-pk",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/gib-users?identifier=4840847211&documentType=DESPATCHADVICE&unit=PK",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "gib-users"
+              ],
+              "query": [
+                {
+                  "key": "identifier",
+                  "value": "4840847211"
+                },
+                {
+                  "key": "documentType",
+                  "value": "DESPATCHADVICE"
+                },
+                {
+                  "key": "unit",
+                  "value": "PK"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": null
+        },
+        {
+          "name": "despatch-gb",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/gib-users?identifier=4840847211&documentType=DESPATCHADVICE&unit=GB",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "gib-users"
+              ],
+              "query": [
+                {
+                  "key": "identifier",
+                  "value": "4840847211"
+                },
+                {
+                  "key": "documentType",
+                  "value": "DESPATCHADVICE"
+                },
+                {
+                  "key": "unit",
+                  "value": "GB"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": null
+        }
+      ]
+    }
+  ]
+}
